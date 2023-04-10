@@ -1,0 +1,30 @@
+{
+  "name": "pizzaria-nodejs",
+  "version": "1.0.0",
+  "description": "Projeto de sistema backend de uma pizzaria com CRUD das principais atividades de venda online",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": " node .index.js",
+    "dev": "nodemon ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rb3z3rra/pizzaria-nodejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rb3z3rra/pizzaria-nodejs/issues"
+  },
+  "homepage": "https://github.com/rb3z3rra/pizzaria-nodejs#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
