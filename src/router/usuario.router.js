@@ -12,7 +12,7 @@ router.post("addSaborFav/:id", usuarioController.addSaborFavUsuarioController);
 router.put("/update/:id", usuarioController.updateUsuarioController);
 
 router.delete("/delete/:id", usuarioController.deleteUsuarioController);
-router.delete("deleteAdress/:id", usuarioController.deleteAdressUsuarioController);
+router.delete("/deleteAdress", usuarioController.deleteAdressUsuarioController);
 router.delete("/deleteSaborFav/:id", usuarioController.deleteSaborFavUsuarioController);
 
 module.exports = router;
