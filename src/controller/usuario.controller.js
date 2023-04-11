@@ -1,5 +1,15 @@
+const usuarioService = require("../service/usuario.service");
+
 const findByIdUsuarioController = async (req, res) => {
   try {
+    const user = await usuarioService.findByIdUsuarioService(req.params.id);
+    if (!user) {
+      return res
+        .status(400)
+        .send({ message: "Usuário não encontrado, tente novamente!" });
+    }
+
+    return res.status(200).send(user);
   } catch (error) {
     console.log(`erro: ${error.message}`);
     return res
@@ -10,6 +20,14 @@ const findByIdUsuarioController = async (req, res) => {
 
 const findAllUsuarioController = async (req, res) => {
   try {
+    return res
+      .status(200)
+      .send(
+        await usuarioService.findAllUsuarioService(
+          req.query.limit,
+          req.query.offset
+        )
+      );
   } catch (error) {
     console.log(`erro: ${error.message}`);
     return res
@@ -20,6 +38,9 @@ const findAllUsuarioController = async (req, res) => {
 
 const createUsuarioController = async (req, res) => {
   try {
+    return res
+      .status(201)
+      .send(await usuarioService.createUsuarioService(req.body));
   } catch (error) {
     console.log(`erro: ${error.message}`);
     return res
@@ -30,6 +51,20 @@ const createUsuarioController = async (req, res) => {
 
 const addAdressUsuarioController = async (req, res) => {
   try {
+    const endereco = await usuarioService.addAdressUsuarioService(
+      req.params.id,
+      req.body
+    );
+
+    if (endereco.value == null) {
+      return res
+        .status(400)
+        .send({ message: "Algo deu errado, tente novamente!" });
+    } else {
+      return res
+        .status(201)
+        .send({ message: "Endereço adicionado com sucesso!" });
+    }
   } catch (error) {
     console.log(`erro: ${error.message}`);
     return res
@@ -40,6 +75,11 @@ const addAdressUsuarioController = async (req, res) => {
 
 const addSaborFavUsuarioController = async (req, res) => {
   try {
+    res
+      .status(201)
+      .send(
+        await usuarioService.addSaborFavUsuarioService(req.params.id, req.body)
+      );
   } catch (error) {
     console.log(`erro: ${error.message}`);
     return res
@@ -50,6 +90,9 @@ const addSaborFavUsuarioController = async (req, res) => {
 
 const updateUsuarioController = async (req, res) => {
   try {
+    return res
+      .status(202)
+      .send(await usuarioService.updateUsuarioService(req.params.id, req.body));
   } catch (error) {
     console.log(`erro: ${error.message}`);
     return res
@@ -60,6 +103,17 @@ const updateUsuarioController = async (req, res) => {
 
 const deleteUsuarioController = async (req, res) => {
   try {
+    const deletedUser = await usuarioService.deleteUsuarioService(req.params.id);
+
+    if (deletedUser == null) {
+      // se a contagem de tudo que foi deletado é maior que zero então foi deletado
+      return res
+        .status(404)
+        .send({ message: "Usuário não encontrado, tente novamente!" });
+    } else {
+      //se a contagem não for maior que zero, então não foi deletado
+      return res.status(200).send({ message: "Sucesso, usuário deletado!" });
+    }
   } catch (error) {
     console.log(`erro: ${error.message}`);
     return res
@@ -70,6 +124,29 @@ const deleteUsuarioController = async (req, res) => {
 
 const deleteAdressUsuarioController = async (req, res) => {
   try {
+    const endereco = await usuarioService.deleteAdressUsuarioService(
+      req.body.id,
+      req.body.adressId
+    );
+
+    let found = false;
+
+    endereco.value.enderecos.map((valor, chave) => {
+      if (valor._id == req.body.adressId) {
+        found = true;
+      }
+    });
+
+    if (true) {
+      return res
+        .status(200)
+        .send({ message: "Endereço removido com sucesso!" });
+    } else {
+      return res.status(400).send({
+        message:
+          "Algo deu errado no endereco, não foi removido, tente novamente!",
+      });
+    }
   } catch (error) {
     console.log(`erro: ${error.message}`);
     return res
@@ -80,6 +157,14 @@ const deleteAdressUsuarioController = async (req, res) => {
 
 const deleteSaborFavUsuarioController = async (req, res) => {
   try {
+    res
+      .status(201)
+      .send(
+        await usuarioService.deleteSaborFavUsuarioService(
+          req.params.id,
+          req.body
+        )
+      );
   } catch (error) {
     console.log(`erro: ${error.message}`);
     return res
