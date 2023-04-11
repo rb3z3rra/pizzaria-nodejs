@@ -46,7 +46,7 @@ const addSaborFavUsuarioService = (id, sabor) => {
   );
 };
 
-const updateUsuarioService = (id) => {
+const updateUsuarioService = (id, body) => {
   return Usuario.findByIdAndUpdate(id, body, { returnDocument: "after" });
 };
 
