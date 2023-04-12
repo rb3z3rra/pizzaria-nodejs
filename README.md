@@ -32,3 +32,21 @@ Possui login e senha para acessar o sistema de pedido de pizzas;
 /usuario/delete/{id}
 /usuario/deleteAdress/{id}
 /usuario/deleteSaborFav/{id}
+
+### Autenticação - Rotas
+
+Ao logar, é gerado um token valido por 24h que ao ser informado via Auth>Bearer, da acesso às demais rotas.
+
+/auth/login
+
+### Pizza
+
+/pizza/create
+
+/pizza/find/{id}
+
+/pizza/findAll
+
+/pizza/update/{id}
+
+/pizza/deletePizza/{id}
