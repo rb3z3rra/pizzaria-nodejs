@@ -50,3 +50,27 @@ Ao logar, é gerado um token valido por 24h que ao ser informado via Auth>Bearer
 /pizza/update/{id}
 
 /pizza/deletePizza/{id}
+
+### Ingrediente
+
+/ingrediente/create
+
+/ingrediente/find/{id}
+
+/ingrediente/findAll
+
+/ingrediente/update/{id}
+
+/ingrediente/delete/{id}
+
+### Categoria
+
+/categoria/create
+
+/categoria/find/{id}
+
+/categoria/findAll
+
+/categoria/update/{id}
+
+/categoria/delete/{id}
