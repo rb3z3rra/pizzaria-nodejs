@@ -34,7 +34,8 @@ const addIngredientePizzaService = (id, ingrediente) => {
             }
         },
         {
-            rawResult: true
+            rawResult: true,
+            returnDocument: "after"
         }
     )
 };
