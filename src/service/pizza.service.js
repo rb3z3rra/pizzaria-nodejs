@@ -53,7 +53,8 @@ const deleteIngredientePizzaService = (id, ingrediente) => {
             }
         },
         {
-            rawResult: true
+            rawResult: true,
+            returnDocument: "after"
         }
     )
 };const addCategoriaPizzaService = (id, categoria) => {
@@ -70,7 +71,8 @@ const deleteIngredientePizzaService = (id, ingrediente) => {
             }
         },
         {
-            rawResult: true
+            rawResult: true,
+            returnDocument: "after"
         }
     )
 };
@@ -88,7 +90,8 @@ const deleteCategoriaPizzaService = (id, categoria) => {
             }
         },
         {
-            rawResult: true
+            rawResult: true,
+            returnDocument: "after"
         }
     )
 };
