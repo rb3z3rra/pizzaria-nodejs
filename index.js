@@ -11,6 +11,7 @@ const pizza = require("./src/router/pizza.router");
 const ingrediente = require("./src/router/ingrediente.router");
 const categoria = require("./src/router/categoria.router");
 const sacola = require("./src/router/sacola.router");
+const pedido = require("./src/router/pedido.router");
 
 const app = express();
 
@@ -24,7 +25,8 @@ app.use("/auth", auth); // Chamando as rotas de auth
 app.use("/pizza", pizza); // Chama as rotas de pizza
 app.use("/ingrediente", ingrediente); // Chama as rotas para ingrediente
 app.use("/categoria", categoria); // Chama as rotas para categoria de pizza
-app.use("/sacola", sacola) // Chama as rotas para sacola de compras
+app.use("/sacola", sacola); // Chama as rotas para sacola de compras
+app.use("/pedido", pedido); //Chama as rotas para pedidos
 
 app.listen(porta, () => {
   console.log(` Servidor rodando em: http://localhost:${porta}`);
