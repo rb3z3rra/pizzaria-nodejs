@@ -2,7 +2,11 @@ const sacolaService = require("../service/sacola.service");
 
 const createSacolaControler = async (req, res) => {
   try {
-    return res.status(201).send(await sacolaService.createSacolaService(req.body));
+    const corpo = {
+      ...req.body,
+      userId: req.userId
+    }
+    return res.status(201).send(await sacolaService.createSacolaService(corpo));
   } catch (error) {
     console.log(`erro: ${error.message}`);
     return res
