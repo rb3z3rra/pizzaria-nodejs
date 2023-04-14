@@ -73,12 +73,12 @@ const addAdressUsuarioController = async (req, res) => {
   }
 };
 
-const addSaborFavUsuarioController = async (req, res) => {
+const addPizzaFavUsuarioController = async (req, res) => {
   try {
     res
       .status(201)
       .send(
-        await usuarioService.addSaborFavUsuarioService(req.params.id, req.body)
+        await usuarioService.addPizzaFavUsuarioService(req.params.id, req.body)
       );
   } catch (error) {
     console.log(`erro: ${error.message}`);
@@ -155,12 +155,12 @@ const deleteAdressUsuarioController = async (req, res) => {
   }
 };
 
-const deleteSaborFavUsuarioController = async (req, res) => {
+const deletePizzaFavUsuarioController = async (req, res) => {
   try {
     res
       .status(201)
       .send(
-        await usuarioService.deleteSaborFavUsuarioService(
+        await usuarioService.deletePizzaFavUsuarioService(
           req.params.id,
           req.body
         )
@@ -178,9 +178,9 @@ module.exports = {
   findAllUsuarioController,
   createUsuarioController,
   addAdressUsuarioController,
-  addSaborFavUsuarioController,
+  addPizzaFavUsuarioController,
   updateUsuarioController,
   deleteUsuarioController,
   deleteAdressUsuarioController,
-  deleteSaborFavUsuarioController,
+  deletePizzaFavUsuarioController,
 };

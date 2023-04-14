@@ -15,10 +15,11 @@ const createUsuarioService = (body) => {
 const addAdressUsuarioService = (id, endereco) => {
   return Usuario.findOneAndUpdate(
     {
-      _id: id,// Localiza o usário pelo id informado
+      _id: id, // Localiza o usário pelo id informado
     },
     {
-      $push: { // Insere endereço 
+      $push: {
+        // Insere endereço
         enderecos: endereco,
       },
     },
@@ -28,20 +29,22 @@ const addAdressUsuarioService = (id, endereco) => {
   );
 };
 
-const addSaborFavUsuarioService = (id, sabor) => {
-  return Usuario.findByIdAndUpdate(
+const addPizzaFavUsuarioService = (id, pizza) => {
+  return Usuario.findOneAndUpdate(
     {
-      _id: id,// Localiza o usário pelo id informado
+      _id: id, // Localiza o usário pelo id informado
     },
     {
-      $push: { // Insere sabor favorito
-        sabores_fav: {
-          _id: sabor._id,
+      $push: {
+        // Insere Pizza favorito
+        pizzas_fav: {
+          _id: pizza._id,
         },
       },
     },
     {
       rawResult: true,
+      returnDocument: "after",
     }
   );
 };
@@ -57,10 +60,11 @@ const deleteUsuarioService = (id) => {
 const deleteAdressUsuarioService = (id, adressId) => {
   return Usuario.findOneAndUpdate(
     {
-      _id: id,// Localiza o usário pelo id informado
+      _id: id, // Localiza o usário pelo id informado
     },
     {
-      $pull: { // Remove endereco
+      $pull: {
+        // Remove endereco
         enderecos: {
           _id: adressId,
         },
@@ -72,19 +76,20 @@ const deleteAdressUsuarioService = (id, adressId) => {
   );
 };
 
-const deleteSaborFavUsuarioService = (id, sabor) => {
+const deletePizzaFavUsuarioService = (id, pizza) => {
   return Usuario.findOneAndUpdate(
-    { 
-        _id: id // Localiza o usário pelo id informado
+    {
+      _id: id, // Localiza o usário pelo id informado
     },
     {
-      $pull: { // remove sabor favorito
-        sabores_fav: {
-          _id: sabor._id,
+      $pull: {
+        // remove Pizza favorito
+        pizzas_fav: {
+          _id: pizza._id,
         },
       },
     },
-    { rawResult: true }
+    { rawResult: true, returnDocument: "after" }
   );
 };
 
@@ -93,9 +98,9 @@ module.exports = {
   findAllUsuarioService,
   createUsuarioService,
   addAdressUsuarioService,
-  addSaborFavUsuarioService,
+  addPizzaFavUsuarioService,
   updateUsuarioService,
   deleteUsuarioService,
   deleteAdressUsuarioService,
-  deleteSaborFavUsuarioService,
+  deletePizzaFavUsuarioService,
 };

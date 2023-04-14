@@ -15,16 +15,16 @@ const usuarioSchema = new mongoose.Schema({
       createdAt: { type: Date, required: true, default: Date.now() }, // Armazena a data de criação dos ende... para futuras auditorias
     },
   ],
-  // sabores_fav: [
-  //   {
-  //     _id: {
-  //       type: mongoose.Schema.Types.ObjectId,
-  //       unique: true,
-  //       ref: "sabores",
-  //     },
-  //     createdAt: { type: Date, default: Date.now() },
-  //   },
-  // ],
+  pizzas_fav: [
+    {
+      _id: {
+        type: mongoose.Schema.Types.ObjectId,
+        unique: true,
+        ref: "pizzas",
+      },
+      createdAt: { type: Date, default: Date.now() },
+    },
+  ],
   createdAt: { type: Date, default: Date.now() },
   admin: { type: Boolean, required: true, default: false }, //false será valor padrão
 });
