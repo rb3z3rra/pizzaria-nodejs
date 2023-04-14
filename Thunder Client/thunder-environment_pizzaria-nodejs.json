@@ -1,0 +1,16 @@
+{
+    "client": "Thunder Client",
+    "environmentName": "pizzaria-nodejs",
+    "dateExported": "2023-04-14T01:44:30.123Z",
+    "version": "1.0",
+    "variables": [
+        {
+            "name": "BaseURL",
+            "value": "http://localhost:3000"
+        },
+        {
+            "name": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MzVlYTkzYmE0YjI5ZjU1Mzg2N2ZhOCIsImlhdCI6MTY4MTQyOTQ3MCwiZXhwIjoxNjgxNTE1ODcwfQ.Wk9fYnCulGv2cmH7gTGxa6DFVgaDRxZjC1s3aE7ou4s"
+        }
+    ]
+}

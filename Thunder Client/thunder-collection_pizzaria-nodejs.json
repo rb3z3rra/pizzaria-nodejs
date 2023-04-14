@@ -1,0 +1,825 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "pizzaria-nodejs",
+    "dateExported": "2023-04-14T01:43:37.914Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "308a6aa9-8e12-4c9a-be82-7c3a6ae2f5b3",
+            "name": "Usuario",
+            "containerId": "",
+            "created": "2023-04-11T01:53:05.235Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "47f26e85-3b93-4931-8622-fcb2b6d7276c",
+            "name": "Auth",
+            "containerId": "",
+            "created": "2023-04-11T23:34:44.578Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "8738136c-68da-41c2-84d8-85b0afe2f3f6",
+            "name": "Pizza",
+            "containerId": "",
+            "created": "2023-04-12T01:38:47.061Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "790c922c-d94c-4086-a1ff-3b359b737131",
+            "name": "Ingrediente",
+            "containerId": "",
+            "created": "2023-04-12T02:32:55.304Z",
+            "sortNum": 50000
+        },
+        {
+            "_id": "29e9d2a7-f428-4f55-8dbd-c3e06be0ade0",
+            "name": "Categoria",
+            "containerId": "",
+            "created": "2023-04-12T02:44:16.547Z",
+            "sortNum": 60000
+        },
+        {
+            "_id": "6f09d491-02f9-480a-9465-630cb15c7772",
+            "name": "Sacola",
+            "containerId": "",
+            "created": "2023-04-14T00:24:10.026Z",
+            "sortNum": 70000
+        },
+        {
+            "_id": "e02c1eb0-e48e-4eda-b2d8-de9815917cb0",
+            "name": "Pedido",
+            "containerId": "",
+            "created": "2023-04-14T01:31:23.879Z",
+            "sortNum": 80000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "3f0afbcd-6051-4ad3-9b59-86515cab7a6f",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "308a6aa9-8e12-4c9a-be82-7c3a6ae2f5b3",
+            "name": "UsuarioCreate",
+            "url": "http://localhost:3000/usuario/create",
+            "method": "POST",
+            "sortNum": 5000,
+            "created": "2023-04-11T01:58:58.176Z",
+            "modified": "2023-04-11T02:09:51.193Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Rodrigo\",\n  \"email\": \"rb@gmail\",\n  \"senha\": \"123\",\n  \"image\": \"/perfil/img.jpg\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "968c1082-b357-4823-8488-736f3b679e56",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "308a6aa9-8e12-4c9a-be82-7c3a6ae2f5b3",
+            "name": "UsuarioAddAdress",
+            "url": "http://localhost:3000/usuario/addAdress/6434c4636c4bd396dfd34f2f",
+            "method": "POST",
+            "sortNum": 7500,
+            "created": "2023-04-11T02:22:36.141Z",
+            "modified": "2023-04-11T02:25:25.236Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"rua\": \"r1\",\n  \"numero\":\"1\",\n  \"complemento\":\"A\",\n  \"CEP\":\"69090-299\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "edffd1a5-4981-4a11-9fba-ce02ed1e11e1",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "308a6aa9-8e12-4c9a-be82-7c3a6ae2f5b3",
+            "name": "UsuarioPizzaFav",
+            "url": "{{BaseURL}}/usuario/addPizzaFav/6435ea93ba4b29f553867fa8",
+            "method": "POST",
+            "sortNum": 8750,
+            "created": "2023-04-14T00:53:57.221Z",
+            "modified": "2023-04-14T01:06:12.320Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"_id\": \"64388fe6a1a97d095b0c7ed6\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7ccad4b5-fba2-4e1e-ac03-c3cb2950227e",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "308a6aa9-8e12-4c9a-be82-7c3a6ae2f5b3",
+            "name": "UsuarioFindAll",
+            "url": "{{BaseURL}}/usuario/findAll",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-04-11T01:53:26.171Z",
+            "modified": "2023-04-11T02:06:31.419Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b388820b-90bd-4d7a-be52-e0405fb45d54",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "308a6aa9-8e12-4c9a-be82-7c3a6ae2f5b3",
+            "name": "UsuarioFindById",
+            "url": "{{BaseURL}}/usuario/find/6435ea93ba4b29f553867fa8",
+            "method": "GET",
+            "sortNum": 13750,
+            "created": "2023-04-11T02:06:46.815Z",
+            "modified": "2023-04-11T23:52:46.668Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "8c52887a-17bd-47b9-ac71-d6439c384390",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "308a6aa9-8e12-4c9a-be82-7c3a6ae2f5b3",
+            "name": "UsuarioUpdate",
+            "url": "{{BaseURL}}/usuario/update/6434bf8cb049c96ba0043317",
+            "method": "PUT",
+            "sortNum": 17500,
+            "created": "2023-04-11T02:07:40.580Z",
+            "modified": "2023-04-11T02:08:19.994Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Rodrigo\",\n  \"email\": \"rb@gmail\",\n  \"senha\": \"123\",\n  \"image\": \"/perfil_new/img.jpg\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "08b38413-f0e4-4c2c-bce1-d43a44b014ad",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "308a6aa9-8e12-4c9a-be82-7c3a6ae2f5b3",
+            "name": "UsuarioDelete",
+            "url": "{{BaseURL}}/usuario/delete/6434c4636c4bd396dfd34f2f",
+            "method": "DELETE",
+            "sortNum": 18750,
+            "created": "2023-04-11T02:09:10.808Z",
+            "modified": "2023-04-11T23:16:21.157Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6058e97e-bd4d-4361-9528-74f0191a22c3",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "8738136c-68da-41c2-84d8-85b0afe2f3f6",
+            "name": "PizzaCreate",
+            "url": "{{BaseURL}}/pizza/create",
+            "method": "POST",
+            "sortNum": 24375,
+            "created": "2023-04-12T01:40:43.891Z",
+            "modified": "2023-04-13T23:08:43.132Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Portuguesa\",\n  \"descricao\": \"Deliciosa\",\n  \"tamanho\": \"Grande\",\n  \"preco_unitario\": 25.0,\n  \"imagem\": \"portuguesa.jpg\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "b9823a89-b997-4ad5-93ea-fec5aad698e9",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "790c922c-d94c-4086-a1ff-3b359b737131",
+            "name": "IngredienteCreate",
+            "url": "{{BaseURL}}/ingrediente/create",
+            "method": "POST",
+            "sortNum": 24375,
+            "created": "2023-04-12T02:32:55.304Z",
+            "modified": "2023-04-12T02:34:39.392Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Tomate\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "ae7f5adc-9696-452c-86c3-5ea4de43bf4b",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "29e9d2a7-f428-4f55-8dbd-c3e06be0ade0",
+            "name": "CategoriaCreate",
+            "url": "{{BaseURL}}/categoria/create",
+            "method": "POST",
+            "sortNum": 24375,
+            "created": "2023-04-12T02:44:16.547Z",
+            "modified": "2023-04-12T02:46:29.245Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Doce\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "c6541ecb-75e8-4c44-afad-ebfbf86fbd0d",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "308a6aa9-8e12-4c9a-be82-7c3a6ae2f5b3",
+            "name": "UsuarioDeleteAdress",
+            "url": "{{BaseURL}}/usuario/deleteAdress",
+            "method": "DELETE",
+            "sortNum": 28750,
+            "created": "2023-04-11T02:26:16.784Z",
+            "modified": "2023-04-11T02:32:31.148Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": \"6434c4636c4bd396dfd34f2f\",\n  \"adressId\": \"6434c5156c4bd396dfd34f32\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "eedc5325-1884-4609-9419-7f60026f3493",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "8738136c-68da-41c2-84d8-85b0afe2f3f6",
+            "name": "PizzaAddIngrediente",
+            "url": "{{BaseURL}}/pizza/addIngredientePizza/64388fe6a1a97d095b0c7ed6",
+            "method": "POST",
+            "sortNum": 36562.5,
+            "created": "2023-04-13T23:09:14.345Z",
+            "modified": "2023-04-13T23:47:33.902Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"_id\": \"64388981fa85e38e7947ae28\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "bc9b8dac-f865-4bf5-b642-03dc9abdaf6d",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "47f26e85-3b93-4931-8622-fcb2b6d7276c",
+            "name": "AuthLogin",
+            "url": "{{BaseURL}}/auth/login",
+            "method": "POST",
+            "sortNum": 38750,
+            "created": "2023-04-11T23:34:55.825Z",
+            "modified": "2023-04-11T23:36:30.353Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"rb@gmail\",\n  \"senha\": \"123\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "6960ec2c-c9f3-4cb2-82d4-895d8a1f1d2f",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "308a6aa9-8e12-4c9a-be82-7c3a6ae2f5b3",
+            "name": "UsuarioDeletePizzaFav",
+            "url": "{{BaseURL}}/usuario/deletePizzaFav/6435ea93ba4b29f553867fa8",
+            "method": "DELETE",
+            "sortNum": 38750,
+            "created": "2023-04-14T01:04:34.263Z",
+            "modified": "2023-04-14T01:07:08.184Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"_id\": \"64388fe6a1a97d095b0c7ed6\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "3f99d55c-bd6d-49d4-bbe6-7783add59d9c",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "8738136c-68da-41c2-84d8-85b0afe2f3f6",
+            "name": "PizzaAddCategoria",
+            "url": "{{BaseURL}}/pizza/addCategoriaPizza/64388fe6a1a97d095b0c7ed6",
+            "method": "POST",
+            "sortNum": 42656.3,
+            "created": "2023-04-13T23:09:38.786Z",
+            "modified": "2023-04-13T23:50:50.107Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"_id\": \"64388954fa85e38e7947ae24\"\n} ",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "435fa69e-8adb-444f-a17a-3510afe114d1",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "8738136c-68da-41c2-84d8-85b0afe2f3f6",
+            "name": "PizzaFindById",
+            "url": "{{BaseURL}}/pizza/find/64360dc8bbd0a26dd7b0f816",
+            "method": "PUT",
+            "sortNum": 48750,
+            "created": "2023-04-12T01:39:00.439Z",
+            "modified": "2023-04-12T01:52:33.090Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "4e7f43c6-3080-4803-938d-4ebf60dbeebc",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "790c922c-d94c-4086-a1ff-3b359b737131",
+            "name": "IngredienteFindById",
+            "url": "{{BaseURL}}/ingrediente/find/64361967c2d4a7068b67157c",
+            "method": "GET",
+            "sortNum": 48750,
+            "created": "2023-04-12T02:32:55.305Z",
+            "modified": "2023-04-12T02:38:20.475Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "636942c7-44e2-4e7a-892f-058ebd137a4a",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "29e9d2a7-f428-4f55-8dbd-c3e06be0ade0",
+            "name": "CategoriaFindById",
+            "url": "{{BaseURL}}/categoria/find/643888f7fa85e38e7947ae1c",
+            "method": "GET",
+            "sortNum": 48750,
+            "created": "2023-04-12T02:44:16.548Z",
+            "modified": "2023-04-13T22:58:15.431Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "451449e8-36bb-4368-bece-2527f5556a0c",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "8738136c-68da-41c2-84d8-85b0afe2f3f6",
+            "name": "PizzaFindAll",
+            "url": "{{BaseURL}}/pizza/findAll",
+            "method": "GET",
+            "sortNum": 58750,
+            "created": "2023-04-12T01:49:10.879Z",
+            "modified": "2023-04-12T01:49:26.489Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "293ec4b6-09fb-4041-a591-298cceeba123",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "790c922c-d94c-4086-a1ff-3b359b737131",
+            "name": "IngredienteFindAll",
+            "url": "{{BaseURL}}/ingrediente/findAll",
+            "method": "GET",
+            "sortNum": 58750,
+            "created": "2023-04-12T02:32:55.306Z",
+            "modified": "2023-04-12T02:38:32.313Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "1a60c97c-b9d4-4b58-bddb-b2b1524d0cb6",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "29e9d2a7-f428-4f55-8dbd-c3e06be0ade0",
+            "name": "CategoriaFindAll",
+            "url": "{{BaseURL}}/categoria/findAll",
+            "method": "GET",
+            "sortNum": 58750,
+            "created": "2023-04-12T02:44:16.549Z",
+            "modified": "2023-04-12T02:46:10.259Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "ea9261ff-03c0-4940-8d27-b346ecd490f6",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "8738136c-68da-41c2-84d8-85b0afe2f3f6",
+            "name": "PizzaUpdate",
+            "url": "{{BaseURL}}/pizza/update/64360dc8bbd0a26dd7b0f816",
+            "method": "PUT",
+            "sortNum": 68750,
+            "created": "2023-04-12T01:51:43.978Z",
+            "modified": "2023-04-12T01:52:59.266Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Portuguesa\",\n  \"descricao\": \"Deliciosa\",\n  \"tamanho\": \"Média\",\n  \"preco_unitario\": 25.0,\n  \"imagem\": \"portuguesa.jpg\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "4274acef-7f58-42f6-9b76-eec7a650f7d3",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "790c922c-d94c-4086-a1ff-3b359b737131",
+            "name": "IngredienteUpdate",
+            "url": "{{BaseURL}}/ingrediente/update/64361967c2d4a7068b67157c",
+            "method": "PUT",
+            "sortNum": 68750,
+            "created": "2023-04-12T02:32:55.307Z",
+            "modified": "2023-04-12T02:38:58.658Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Cebola\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "003ba067-29c8-4b91-9890-15c2c276e1e3",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "29e9d2a7-f428-4f55-8dbd-c3e06be0ade0",
+            "name": "CategoriaUpdate",
+            "url": "{{BaseURL}}/categoria/update/643888f7fa85e38e7947ae1c",
+            "method": "PUT",
+            "sortNum": 68750,
+            "created": "2023-04-12T02:44:16.550Z",
+            "modified": "2023-04-13T22:58:33.298Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Salgada\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "9ecdb386-c8a9-4861-9b03-a1c2e0e7e07e",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "8738136c-68da-41c2-84d8-85b0afe2f3f6",
+            "name": "PizzaDelete",
+            "url": "{{BaseURL}}/pizza/deletePizza/64388b7bfa85e38e7947ae31",
+            "method": "DELETE",
+            "sortNum": 78750,
+            "created": "2023-04-12T01:53:06.554Z",
+            "modified": "2023-04-13T23:27:24.880Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "61a47f75-836e-480c-8cc4-257272a8d764",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "790c922c-d94c-4086-a1ff-3b359b737131",
+            "name": "IngredienteDelete",
+            "url": "{{BaseURL}}/ingrediente/delete/64361967c2d4a7068b67157c",
+            "method": "DELETE",
+            "sortNum": 78750,
+            "created": "2023-04-12T02:32:55.308Z",
+            "modified": "2023-04-12T02:39:31.922Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "84cfafb4-c86d-49e1-905f-5170106cbdf6",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "29e9d2a7-f428-4f55-8dbd-c3e06be0ade0",
+            "name": "CategoriaDelete",
+            "url": "{{BaseURL}}/categoria/delete/643888f7fa85e38e7947ae1c",
+            "method": "DELETE",
+            "sortNum": 78750,
+            "created": "2023-04-12T02:44:16.551Z",
+            "modified": "2023-04-13T22:58:40.921Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "521fe056-f722-4765-b714-1310d589bb9d",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "8738136c-68da-41c2-84d8-85b0afe2f3f6",
+            "name": "PizzaDeleteIngrediente",
+            "url": "{{BaseURL}}/pizza/deleteIngredientePizza/64388fe6a1a97d095b0c7ed6",
+            "method": "DELETE",
+            "sortNum": 88750,
+            "created": "2023-04-13T23:21:42.454Z",
+            "modified": "2023-04-13T23:28:50.048Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"_id\": \"64388981fa85e38e7947ae28\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "23227e68-9a37-4ca1-b938-9f6e91f8a8f5",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "6f09d491-02f9-480a-9465-630cb15c7772",
+            "name": "SacolaCreate",
+            "url": "{{BaseURL}}/sacola/create",
+            "method": "POST",
+            "sortNum": 88750,
+            "created": "2023-04-14T00:24:22.299Z",
+            "modified": "2023-04-14T00:45:16.595Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"pizzas\": [\n    {\"_id\": \"6435ea93ba4b29f553867fa8\", \"quantidade\": 2}\n  ],\n  \"precoTotal\": 100.53,\n  \"frete\": 8.70\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "3e221359-1450-4e9b-a7a9-ee0dc29baab7",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "e02c1eb0-e48e-4eda-b2d8-de9815917cb0",
+            "name": "PedidoCreate",
+            "url": "{{BaseURL}}/pedido/create",
+            "method": "POST",
+            "sortNum": 88750,
+            "created": "2023-04-14T01:31:23.879Z",
+            "modified": "2023-04-14T01:32:01.192Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"pizzas\": [\n    {\"_id\": \"6435ea93ba4b29f553867fa8\", \"quantidade\": 2}\n  ],\n  \"precoTotal\": 100.53,\n  \"frete\": 8.70,\n  \"concluido\": false\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "bd82495e-dcc2-4e0f-909e-b92b9806a938",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "8738136c-68da-41c2-84d8-85b0afe2f3f6",
+            "name": "PizzaDeleteCategoria",
+            "url": "{{BaseURL}}/pizza/deleteCategoriaPizza/64388fe6a1a97d095b0c7ed6",
+            "method": "DELETE",
+            "sortNum": 98750,
+            "created": "2023-04-13T23:29:47.630Z",
+            "modified": "2023-04-13T23:51:25.215Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"_id\": \"64388954fa85e38e7947ae24\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "4f42bbda-8944-4c7c-be49-ff3fe05344b7",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "6f09d491-02f9-480a-9465-630cb15c7772",
+            "name": "SacolaFindById",
+            "url": "{{BaseURL}}/sacola/find/6438a21ce6abaa9643b80dab",
+            "method": "GET",
+            "sortNum": 98750,
+            "created": "2023-04-14T00:47:06.268Z",
+            "modified": "2023-04-14T00:49:04.887Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "1ef263c6-23f8-4aae-a30d-a7e53b1573b3",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "e02c1eb0-e48e-4eda-b2d8-de9815917cb0",
+            "name": "PedidoFindById",
+            "url": "{{BaseURL}}/pedido/find/6438af3d93cf5ea9b4adccbe",
+            "method": "GET",
+            "sortNum": 98750,
+            "created": "2023-04-14T01:31:23.880Z",
+            "modified": "2023-04-14T01:41:35.577Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "05efb36e-073c-43d1-9b0c-c1019bef95f4",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "6f09d491-02f9-480a-9465-630cb15c7772",
+            "name": "SacolaFindAll",
+            "url": "{{BaseURL}}/sacola/findAll",
+            "method": "GET",
+            "sortNum": 108750,
+            "created": "2023-04-14T00:47:56.145Z",
+            "modified": "2023-04-14T00:48:13.259Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "34f68adf-f462-4f15-a67f-f241fc925956",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "e02c1eb0-e48e-4eda-b2d8-de9815917cb0",
+            "name": "PedidoFindAll",
+            "url": "{{BaseURL}}/pedido/findAll",
+            "method": "GET",
+            "sortNum": 108750,
+            "created": "2023-04-14T01:31:23.881Z",
+            "modified": "2023-04-14T01:34:57.682Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "d5c4c886-b7ad-46d1-ab1e-f3619bba16dc",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "6f09d491-02f9-480a-9465-630cb15c7772",
+            "name": "SacolaUpdate",
+            "url": "{{BaseURL}}/sacola/update/6438a21ce6abaa9643b80dab",
+            "method": "PUT",
+            "sortNum": 118750,
+            "created": "2023-04-14T00:48:17.982Z",
+            "modified": "2023-04-14T00:49:59.847Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"pizzas\": [\n    {\"_id\": \"6435ea93ba4b29f553867fa8\", \"quantidade\": 2}\n  ],\n  \"precoTotal\": 50.30,\n  \"frete\": 8.70\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "1e887019-1ac1-4415-b67e-78017b536092",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "e02c1eb0-e48e-4eda-b2d8-de9815917cb0",
+            "name": "PedidoUpdateStatus",
+            "url": "{{BaseURL}}/pedido/updateStatus/6438af3d93cf5ea9b4adccbe",
+            "method": "PATCH",
+            "sortNum": 118750,
+            "created": "2023-04-14T01:31:23.882Z",
+            "modified": "2023-04-14T01:42:01.794Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "1932f66c-b748-4063-b34d-68e0f08356d8",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "6f09d491-02f9-480a-9465-630cb15c7772",
+            "name": "SacolaDelete",
+            "url": "{{BaseURL}}/sacola/delete/6438a21ce6abaa9643b80dab",
+            "method": "DELETE",
+            "sortNum": 128750,
+            "created": "2023-04-14T00:50:39.588Z",
+            "modified": "2023-04-14T00:51:03.860Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "1cc1217d-99b0-471e-b8b7-1268e3d48f56",
+            "colId": "d6e164a6-a1bb-4fe8-9307-cc2ab7645d7f",
+            "containerId": "e02c1eb0-e48e-4eda-b2d8-de9815917cb0",
+            "name": "PedidoDelete",
+            "url": "{{BaseURL}}/pedido/delete/6438af3d93cf5ea9b4adccbe",
+            "method": "DELETE",
+            "sortNum": 128750,
+            "created": "2023-04-14T01:31:23.883Z",
+            "modified": "2023-04-14T01:42:12.186Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        }
+    ]
+}
