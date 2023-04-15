@@ -15,6 +15,10 @@ Projeto de sistema backend de uma pizzaria com CRUD das principais atividades de
 
 MVC - Model - View - Controller
 
+## Env
+
+Dados sensíveis ficam armazenadas em variáveis de ambiente utilizando o pacote dotEnv
+
 ## Models
 
 ### Usuário
@@ -39,7 +43,36 @@ Ao logar, é gerado um token valido por 24h que ao ser informado via Auth>Bearer
 
 /auth/login
 
+### Métodos
+
+A API utiliza os seguintes métodos de requisição:
+
+
+| Método  | Descrição                                             |
+| ---------- | --------------------------------------------------------- |
+| `GET`    | Retorna informações de um ou mais registros.          |
+| `POST`   | Utilizado para criar um novo registro.                  |
+| `PUT`    | Atualiza dados de um registro ou altera sua situação. |
+| `PATCH`  | Aplica modificações parciais a um recurso.            |
+| `DELETE` | Remove um registro do sistema.                          |
+
+### Respostas
+
+As respostas ou Server response retornam status baseados nos seguintes códigos:
+
+
+| Código | Descrição                                                   |
+| --------- | --------------------------------------------------------------- |
+| `200`   | Requisição executada com sucesso (success).                 |
+| `201`   | Informação cadastrada com sucesso (Created).                |
+| `400`   | Requisição inválida (Bad Request).                         |
+| `401`   | Erro de Autenticação. Problemas com o Token (Unauthorized). |
+| `404`   | Registro pesquisado não encontrado (Not found).              |
+| `500`   | Erro interno no Servidor (Internal Server Error).             |
+
 ### Pizza
+
+CRUD de pizzas
 
 /pizza/create
 
@@ -53,6 +86,8 @@ Ao logar, é gerado um token valido por 24h que ao ser informado via Auth>Bearer
 
 ### Ingrediente
 
+CRUD de ingredientes das pizzas
+
 /ingrediente/create
 
 /ingrediente/find/{id}
@@ -65,6 +100,8 @@ Ao logar, é gerado um token valido por 24h que ao ser informado via Auth>Bearer
 
 ### Categoria
 
+CRUD para categorias de pizzas (Borda recheada, Borda Tradicional, Doce, Salgada, etc)
+
 /categoria/create
 
 /categoria/find/{id}
@@ -74,3 +111,45 @@ Ao logar, é gerado um token valido por 24h que ao ser informado via Auth>Bearer
 /categoria/update/{id}
 
 /categoria/delete/{id}
+
+### Bebida
+
+CRUD de bebidas
+
+/bebida/create
+
+/bebida/find/{id}
+
+/bebida/findAll
+
+/bebida/update/{id}
+
+/bebida/delete/{id}
+
+### Sacola
+
+CRUD de sacola
+
+/sacola/create
+
+/sacola/find/{id}
+
+/sacola/findAll
+
+/sacola/update/{id}
+
+/sacola/delete/{id}
+
+### Pedido
+
+CRUD de pedido
+
+/pedido/create
+
+/pedido/find/{id}
+
+/pedido/findAll
+
+/pedido/update/{id}
+
+/pedido/delete/{id}
