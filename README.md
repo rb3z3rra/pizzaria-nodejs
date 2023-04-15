@@ -2,6 +2,10 @@
 
 Projeto de sistema backend de uma pizzaria com CRUD das principais atividades de venda online
 
+## Banco de Dados
+
+* MongoDB
+
 ## Dependências
 
 * Express
