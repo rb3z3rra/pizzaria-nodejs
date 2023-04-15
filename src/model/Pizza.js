@@ -10,7 +10,6 @@ const PizzaSchema = new mongoose.Schema({
     {
       _id: {
         type: mongoose.Schema.Types.ObjectId,
-        required: true,
         ref: "ingrediente",
       },
       createdAt: { type: Date, required: true, default: Date.now() },
@@ -20,7 +19,6 @@ const PizzaSchema = new mongoose.Schema({
     {
       _id: {
         type: mongoose.Schema.Types.ObjectId,
-        required: true,
         ref: "categoria",
       },
       createdAt: { type: Date, required: true, default: Date.now() },

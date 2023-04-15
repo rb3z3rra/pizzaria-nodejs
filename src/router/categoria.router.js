@@ -5,6 +5,7 @@ const {
   validaCategoria,
   validaIdParams,
 } = require("../middleware/validacao.middleware");
+const paginacao = require("../middleware/paginacao.middleware");
 
 router.post(
   "/create",
@@ -20,7 +21,12 @@ router.get(
   categoriaController.findByIdCategoriaController
 );
 
-router.get("/findAll", authMiddleware,categoriaController.findAllCategoriaController);
+router.get(
+  "/findAll",
+  authMiddleware,
+  paginacao,
+  categoriaController.findAllCategoriaController
+);
 
 router.put(
   "/update/:id",
@@ -30,6 +36,11 @@ router.put(
   categoriaController.updateCategoriaController
 );
 
-router.delete("/delete/:id",authMiddleware, validaIdParams, categoriaController.deleteCategoriaController);
+router.delete(
+  "/delete/:id",
+  authMiddleware,
+  validaIdParams,
+  categoriaController.deleteCategoriaController
+);
 
 module.exports = router;

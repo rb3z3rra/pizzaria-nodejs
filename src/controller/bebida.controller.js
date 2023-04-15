@@ -28,7 +28,7 @@ const findByIdBebidaController = async (req, res) => {
 
 const findAllBebidaController = async (req, res) => {
   try {
-    return res.status(200).send(await bebidaService.findAllBebidaService());
+    return res.status(200).send(await bebidaService.findAllBebidaService(req.query.limit, req.query.offset));
   } catch (error) {
     console.log(`Error: ${error}`);
     return res

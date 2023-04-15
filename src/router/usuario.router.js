@@ -7,6 +7,7 @@ const {
   valida_IdBody,
   validaEndereco,
 } = require("../middleware/validacao.middleware");
+const paginacao = require("../middleware/paginacao.middleware");
 
 router.get(
   "/find/:id",
@@ -18,6 +19,7 @@ router.get(
 router.get(
   "/findAll",
   authMiddleware,
+  paginacao,
   usuarioController.findAllUsuarioController
 );
 

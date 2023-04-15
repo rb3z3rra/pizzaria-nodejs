@@ -2,7 +2,9 @@ const ingredienteService = require("../service/ingrediente.service");
 
 const createIngredienteController = async (req, res) => {
   try {
-    return res.status(201).send(await ingredienteService.createIngredienteService(req.body));
+    return res
+      .status(201)
+      .send(await ingredienteService.createIngredienteService(req.body));
   } catch (error) {
     console.log(`erro: ${error.message}`);
     return res
@@ -12,7 +14,9 @@ const createIngredienteController = async (req, res) => {
 };
 const findByIdIngredienteController = async (req, res) => {
   try {
-    return res.status(200).send(await ingredienteService.findByIdIngredienteService(req.params.id));
+    return res
+      .status(200)
+      .send(await ingredienteService.findByIdIngredienteService(req.params.id));
   } catch (error) {
     console.log(`erro: ${error.message}`);
     return res
@@ -22,7 +26,14 @@ const findByIdIngredienteController = async (req, res) => {
 };
 const findAllIngredienteController = async (req, res) => {
   try {
-    return res.status(200).send(await ingredienteService.findAllIngredienteService());
+    return res
+      .status(200)
+      .send(
+        await ingredienteService.findAllIngredienteService(
+          req.query.limit,
+          req.query.offset
+        )
+      );
   } catch (error) {
     console.log(`erro: ${error.message}`);
     return res
@@ -32,7 +43,14 @@ const findAllIngredienteController = async (req, res) => {
 };
 const updateIngredienteController = async (req, res) => {
   try {
-    return res.status(202).send(await ingredienteService.updateIngredienteService(req.params.id, req.body));
+    return res
+      .status(202)
+      .send(
+        await ingredienteService.updateIngredienteService(
+          req.params.id,
+          req.body
+        )
+      );
   } catch (error) {
     console.log(`erro: ${error.message}`);
     return res
@@ -42,7 +60,9 @@ const updateIngredienteController = async (req, res) => {
 };
 const deleteIngredienteController = async (req, res) => {
   try {
-    return res.status(200).send(await ingredienteService.deleteIngredienteService(req.params.id));
+    return res
+      .status(200)
+      .send(await ingredienteService.deleteIngredienteService(req.params.id));
   } catch (error) {
     console.log(`erro: ${error.message}`);
     return res

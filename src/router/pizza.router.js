@@ -6,6 +6,7 @@ const {
   validaIdParams,
   valida_IdBody,
 } = require("../middleware/validacao.middleware");
+const paginacao = require("../middleware/paginacao.middleware");
 
 router.get(
   "/find/:id",
@@ -14,7 +15,12 @@ router.get(
   pizzaController.findByIdPizzaController
 );
 
-router.get("/findAll", authMiddleware, pizzaController.findAllPizzaController);
+router.get(
+  "/findAll",
+  authMiddleware,
+  paginacao,
+  pizzaController.findAllPizzaController
+);
 
 router.post(
   "/create",

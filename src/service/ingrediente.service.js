@@ -6,8 +6,8 @@ const createIngredienteService = (body) => {
 const findByIdIngredienteService = (id) => {
   return Ingrediente.findById(id);
 };
-const findAllIngredienteService = () => {
-  return Ingrediente.find();
+const findAllIngredienteService = (limit, offset) => {
+  return Ingrediente.find().limit(limit).skip(offset);
 };
 const updateIngredienteService = (id, body) => {
   return Ingrediente.findByIdAndUpdate(id, body, { returnDocument: "after" });

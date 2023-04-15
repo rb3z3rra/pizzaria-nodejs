@@ -33,7 +33,7 @@ const findAllUsuarioController = async (req, res) => {
     return res
       .status(500)
       .send({ message: "Erro inesperado, tente novamente!" });
-  }
+  } 
 };
 
 const createUsuarioController = async (req, res) => {

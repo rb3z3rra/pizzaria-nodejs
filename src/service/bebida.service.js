@@ -8,8 +8,8 @@ const findByIdBebidaService = (id) => {
   return Bebida.findById(id);
 };
 
-const findAllBebidaService = () => {
-  return Bebida.find();
+const findAllBebidaService = (limit, offset) => {
+  return Bebida.find().limit(limit).skip(offset);
 };
 
 const updateBebidaService = (id, body) => {
