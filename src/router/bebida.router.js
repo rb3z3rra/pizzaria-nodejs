@@ -5,6 +5,7 @@ const {
   validaBebida,
   validaIdParams,
 } = require("../middleware/validacao.middleware");
+const paginacao = require("../middleware/paginacao.middleware");
 
 router.post("/create", authMiddleware, validaBebida, bebidaController.createBebidaController);
 
@@ -18,6 +19,7 @@ router.get(
 router.get(
   "/findAll",
   authMiddleware,
+  paginacao,
   bebidaController.findAllBebidaController
 );
 

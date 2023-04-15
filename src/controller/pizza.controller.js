@@ -15,7 +15,7 @@ const findByIdPizzaController = async (req, res) => {
 
 const findAllPizzaController = async (req, res) => {
   try {
-    return res.status(200).send(await pizzaService.findAllPizzaService());
+    return res.status(200).send(await pizzaService.findAllPizzaService(req.query.limit, req.query.offset));
   } catch (error) {
     console.log(`erro: ${error.message}`);
     return res

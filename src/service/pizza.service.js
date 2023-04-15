@@ -4,8 +4,8 @@ const findByIdPizzaService = (id) => {
   return Pizza.findById(id);
 };
 
-const findAllPizzaService = () => {
-  return Pizza.find();
+const findAllPizzaService = (limit, offset) => {
+  return Pizza.find().limit(limit).skip(offset);
 };
 
 const createPizzaService = (body) => {

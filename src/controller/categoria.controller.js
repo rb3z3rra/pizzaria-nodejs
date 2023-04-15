@@ -22,7 +22,7 @@ const findByIdCategoriaController = async (req, res) => {
 };
 const findAllCategoriaController = async (req, res) => {
   try {
-    return res.status(200).send(await CategoriaService.findAllCategoriaService());
+    return res.status(200).send(await CategoriaService.findAllCategoriaService(req.query.limit, req.query.offset));
   } catch (error) {
     console.log(`erro: ${error.message}`);
     return res
