@@ -11,6 +11,16 @@ const sacolaSchema = new mongoose.Schema({
       quantidade: { type: Number, required: true },
     },
   ],
+  bebidas: [
+    {
+      _id: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "bebidas",
+        required: true,
+      },
+      quantidade: { type: Number, required: true },
+    },
+  ],
   precoTotal: { type: Number, required: true },
   frete: { type: Number, required: true },
   userId: {
