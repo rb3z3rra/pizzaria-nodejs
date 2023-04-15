@@ -1,6 +1,7 @@
 const express = require("express");
 require("dotenv").config();
 const connectToDatabase = require("./src/database/database");
+const cors = require("cors(");
 
 
 connectToDatabase();
@@ -21,6 +22,14 @@ const porta = 3000;
 
 
 app.use(express.json());
+app.use(
+  cors({
+    // origin: "*" // com * é acessivel de qualquer ip
+    origin: "localhost:3001", //acessivel de um app rodando na porta 3001
+    // origin: [ "localhost:3001", "localhost:3002"] // acessivel por um array de enderecos
+    methods: ["GET", "PUT", "DELETE", "PATCH"], // Lista os métodos permitidos
+  })
+);
 
 app.use("/usuario", usuario); // Chama as rotas de usuario
 app.use("/auth", auth); // Chamando as rotas de auth
