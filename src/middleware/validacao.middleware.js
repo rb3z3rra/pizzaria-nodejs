@@ -98,6 +98,38 @@ const validaPizza = (req, res, next) => {
   }
 };
 
+const validaBebida = (req, res, next) => {
+  let erros = []; // Array para acumular os erros
+
+  if (!req.body.nome) {
+    erros.push("nome");
+  }
+  if (!req.body.descricao) {
+    erros.push("descricao");
+  }
+  if (!req.body.preco_unitario) {
+    erros.push("precoUnitario");
+  }
+  if (!req.body.imagem) {
+    erros.push("imagem");
+  }
+
+  // Testando quantos erros temos e tomando decioes em relação a isso
+  if (erros.length == 0) {
+    return next();
+  } else {
+    if (erros.length == 1) {
+      res
+        .status(400)
+        .send({ message: `O campo ${erros} precisa ser preenchido!` });
+    } else {
+      res
+        .status(400)
+        .send({ message: `Os campos ${erros} precisam ser preenchidos!` });
+    }
+  }
+};
+
 const validaCategoria = (req, res, next) => {
   if (!req.body.nome) {
     res.status(400).send({ message: "O campo 'nome' precisa ser preenchido!" });
@@ -257,5 +289,6 @@ module.exports = {
   valida_IdBody,
   validaLogin,
   validaSacolaPedido,
-  validaIngrediente
+  validaIngrediente,
+  validaBebida
 };
